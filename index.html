@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apurv Vyas — Cloud, Platform &amp; Backend Engineer</title>
+<meta name="description" content="Apurv Vyas — Product Engineer specializing in cloud infrastructure, platform engineering, and backend systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a href="#top" class="brand">
+    <span class="brand-dot" aria-hidden="true"></span>
+    apurv<span class="brand-dim">.vyas</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="#log">Experience</a>
+    <a href="#services">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+  <a href="#log">Experience</a>
+  <a href="#services">Projects</a>
+  <a href="#stack">Stack</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">// product engineer · mumbai, in</p>
+      <h1>Apurv Vyas</h1>
+      <p class="hero-role">I keep trading infrastructure up, secure, and cheap to run —
+        then write the backend that sits on top of it.</p>
+      <p class="hero-sub">Cloud &amp; Platform Engineering at <strong>Dhan</strong>, with three years
+        of production backend work before that. This page is a status page for a career.</p>
+      <div class="hero-actions">
+        <a href="#log" class="btn btn-primary">View the deployment log</a>
+        <a href="mailto:apurv.vys@gmail.com" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="status-panel" role="group" aria-label="Live system status">
+      <div class="status-panel-head">
+        <span class="dot dot-live" aria-hidden="true"></span>
+        <span class="status-title">career.status</span>
+        <span class="status-region">ap-south-1</span>
+      </div>
+
+      <ul class="status-list">
+        <li class="status-row">
+          <span class="row-label">
+            <span class="dot dot-ok" aria-hidden="true"></span>
+            cloud-platform-eng
+          </span>
+          <span class="row-meta">since 01/2025 · operational</span>
+        </li>
+        <li class="status-row">
+          <span class="row-label">
+            <span class="dot dot-ok" aria-hidden="true"></span>
+            backend-systems
+          </span>
+          <span class="row-meta">2021–2024 · shipped</span>
+        </li>
+        <li class="status-row">
+          <span class="row-label">
+            <span class="dot dot-ok" aria-hidden="true"></span>
+            security-governance
+          </span>
+          <span class="row-meta">IAM · SCPs · least-priv</span>
+        </li>
+        <li class="status-row">
+          <span class="row-label">
+            <span class="dot dot-warn" aria-hidden="true"></span>
+            kubernetes / terraform
+          </span>
+          <span class="row-meta">in progress</span>
+        </li>
+      </ul>
+
+      <div class="status-panel-foot">
+        <div class="uptime-block">
+          <span class="uptime-label">uptime since first commit (jun 2021)</span>
+          <span class="uptime-value" id="uptimeCounter">calculating…</span>
+        </div>
+        <div class="uptime-block">
+          <span class="uptime-label">monthly cost saved, current role</span>
+          <span class="uptime-value accent-amber">$2,500+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / DEPLOYMENT LOG -->
+  <section class="section" id="log">
+    <h2 class="section-heading"><span class="tag">$</span> git log --oneline --graph experience</h2>
+
+    <div class="log">
+
+      <article class="log-entry">
+        <div class="log-time">
+          <span class="log-date">2025‑01</span>
+          <span class="log-date-sub">→ present</span>
+        </div>
+        <div class="log-line" aria-hidden="true"></div>
+        <div class="log-body">
+          <div class="log-card-head">
+            <h3>Product Engineer — Cloud Infrastructure, DevOps &amp; Platform Engineering</h3>
+            <span class="badge badge-live">in prod</span>
+          </div>
+          <p class="log-company">Dhan (Raise Financial Services) · Mumbai, Maharashtra</p>
+          <ul class="log-bullets">
+            <li>Architected end-to-end AWS infrastructure for platforms including Stratzy, an algorithmic trading platform — networking, CI/CD and security controls for high-availability, low-latency workloads.</li>
+            <li>Designed and governed a multi-account AWS setup with Organizations, cross-account IAM roles and SCPs to enforce isolation and security guardrails.</li>
+            <li>Rolled out least-privilege access models, audited role usage, and stood up centralized logging and billing visibility.</li>
+            <li>Cut AWS spend by <strong>$2,500+/month</strong> through compute right-sizing, storage optimization and continuous cost monitoring.</li>
+            <li>Automated CI/CD with Jenkins and AWS CodePipeline (CodeBuild, CodeDeploy) with SCA/SAST/DAST checks — deployment effort down <strong>~60%</strong>.</li>
+            <li>Set up CloudWatch, Prometheus and Grafana for monitoring; handled a CentOS 7 → 9 migration with minimal downtime.</li>
+            <li>Hardened platform stability via patch management, backups and DR planning, and shared knowledge across the team.</li>
+          </ul>
+          <div class="log-tags">
+            <span>AWS Organizations</span><span>IAM / SCPs</span><span>Jenkins</span><span>CodePipeline</span>
+            <span>Prometheus</span><span>Grafana</span><span>CloudWatch</span><span>Docker</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="log-entry">
+        <div class="log-time">
+          <span class="log-date">2022‑02</span>
+          <span class="log-date-sub">→ 2024‑12</span>
+        </div>
+        <div class="log-line" aria-hidden="true"></div>
+        <div class="log-body">
+          <div class="log-card-head">
+            <h3>Product Developer — Backend</h3>
+            <span class="badge badge-done">shipped</span>
+          </div>
+          <p class="log-company">Upsurge (Raise Financial Services) · Mumbai, Maharashtra</p>
+          <ul class="log-bullets">
+            <li>Built and maintained backend systems and REST APIs on Node.js, Express, MongoDB and AWS under high user traffic.</li>
+            <li>Developed onboarding and authentication flows — OTP login, encryption, token-based sessions.</li>
+            <li>Integrated payments, subscriptions and recommendation features to lift engagement.</li>
+            <li>Cut latency by <strong>~40%</strong> with Redis caching, query optimization and async processing.</li>
+            <li>Refactored a monolith into modular, scalable services, improving performance and maintainability.</li>
+          </ul>
+          <div class="log-tags">
+            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>Payments</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="log-entry">
+        <div class="log-time">
+          <span class="log-date">2021‑06</span>
+          <span class="log-date-sub">→ 2022‑02</span>
+        </div>
+        <div class="log-line" aria-hidden="true"></div>
+        <div class="log-body">
+          <div class="log-card-head">
+            <h3>Software Engineer — Backend</h3>
+            <span class="badge badge-done">shipped</span>
+          </div>
+          <p class="log-company">Mobzway Technologies Pvt. Ltd. · Jaipur, Rajasthan</p>
+          <ul class="log-bullets">
+            <li>Built high-performance Node.js APIs for real-time multiplayer gaming systems on MongoDB and SmartFoxServer.</li>
+            <li>Implemented secure HMAC/SHA-256 authentication and backend performance optimizations.</li>
+          </ul>
+          <div class="log-tags">
+            <span>Node.js</span><span>MongoDB</span><span>SmartFoxServer</span><span>HMAC/SHA-256</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS / SERVICES -->
+  <section class="section" id="services">
+    <h2 class="section-heading"><span class="tag">#</span> portfolio services</h2>
+    <p class="section-sub">Independent projects built to demonstrate the cloud/platform track end-to-end — each mirrors a real problem from the day job.</p>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <div class="service-head">
+          <h3>AWS Landing Zone <span class="service-sub">/ Account Vending Machine</span></h3>
+          <span class="badge badge-progress">design → build</span>
+        </div>
+        <p>Automates new-account onboarding — SSO, KMS, SCPs, centralized logging and cross-account IAM — built with the AWS CDK in TypeScript. Directly mirrors the manual account-onboarding process at Dhan, turned into repeatable infrastructure-as-code.</p>
+        <div class="log-tags">
+          <span>AWS CDK</span><span>TypeScript</span><span>SSO</span><span>KMS</span><span>SCPs</span>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-head">
+          <h3>Multi-Tenant Moodle LMS</h3>
+          <span class="badge badge-scoped">fully scoped</span>
+        </div>
+        <p>Centralized LMS for every Raise Holdings entity at lms.raiseholding.co — Google OAuth, cohort-based tenant separation, Dockerized Moodle with bundled MariaDB, and S3 for storage and backups. Architecture and CloudFormation template fully designed.</p>
+        <div class="log-tags">
+          <span>CloudFormation</span><span>Docker</span><span>MariaDB</span><span>S3</span><span>Google OAuth</span>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-head">
+          <h3>HashiCorp Nomad POC</h3>
+          <span class="badge badge-poc">poc</span>
+        </div>
+        <p>Proof of concept for Stratzy exploring Nomad as a lighter alternative to Kubernetes for HFT workloads — VM/binary orchestration across 3 EC2 instances with the exec driver, provisioned via CloudFormation. Built for an internal stakeholder review ahead of any implementation decision.</p>
+        <div class="log-tags">
+          <span>Nomad</span><span>EC2</span><span>CloudFormation</span><span>HFT workloads</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STACK / SKILLS -->
+  <section class="section" id="stack">
+    <h2 class="section-heading"><span class="tag">~</span> cat /etc/stack.conf</h2>
+
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3>Languages &amp; Backend</h3>
+        <p>JavaScript (Node.js), REST APIs</p>
+      </div>
+      <div class="stack-card">
+        <h3>Databases &amp; Caching</h3>
+        <p>MongoDB, MySQL, Redis</p>
+      </div>
+      <div class="stack-card">
+        <h3>Cloud &amp; Infrastructure</h3>
+        <p>AWS — EC2, IAM, VPC, S3, CloudWatch, Organizations, SCPs</p>
+      </div>
+      <div class="stack-card">
+        <h3>CI/CD &amp; Containers</h3>
+        <p>Jenkins, AWS CodePipeline (CodeBuild, CodeDeploy), Docker, GitLab</p>
+      </div>
+      <div class="stack-card">
+        <h3>Monitoring &amp; Observability</h3>
+        <p>Grafana, Prometheus, CloudWatch</p>
+      </div>
+      <div class="stack-card">
+        <h3>Networking &amp; Security</h3>
+        <p>VPC, Subnets, Security Groups, Load Balancing, IAM, Least Privilege, SCPs, TLS</p>
+      </div>
+      <div class="stack-card">
+        <h3>Architecture</h3>
+        <p>System Design, Microservices, Distributed Systems, OOP</p>
+      </div>
+      <div class="stack-card">
+        <h3>Operating Systems</h3>
+        <p>Linux — CentOS, Ubuntu</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-narrow" id="education">
+    <h2 class="section-heading"><span class="tag">&gt;</span> education</h2>
+    <div class="edu-card">
+      <div>
+        <h3>Bachelor of Technology, Computer Science</h3>
+        <p class="log-company">Arya Institute of Engineering &amp; Technology, Jaipur (RTU Kota) · Jaipur, Rajasthan</p>
+      </div>
+      <span class="edu-year">2016 – 2020</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <h2 class="section-heading"><span class="tag">$</span> curl -X CONNECT apurv</h2>
+    <p class="section-sub">Open to conversations on cloud platform engineering, backend systems, or capital-markets infrastructure.</p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:apurv.vys@gmail.com">
+        <span class="contact-label">email</span>
+        <span class="contact-value">apurv.vys@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+919414353674">
+        <span class="contact-label">phone</span>
+        <span class="contact-value">+91 94143 53674</span>
+      </a>
+      <a class="contact-card" href="#" id="linkedinLink">
+        <span class="contact-label">linkedin</span>
+        <span class="contact-value">add your profile URL →</span>
+      </a>
+      <div class="contact-card">
+        <span class="contact-label">location</span>
+        <span class="contact-value">Mumbai, Maharashtra, IN</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Built by Apurv Vyas · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
