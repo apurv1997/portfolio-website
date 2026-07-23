@@ -47,14 +47,3 @@ setInterval(renderUptime, 60000);
 // ----- Footer year -----
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// ----- LinkedIn placeholder notice -----
-const linkedinLink = document.getElementById('linkedinLink');
-if (linkedinLink) {
-  linkedinLink.addEventListener('click', (e) => {
-    if (linkedinLink.getAttribute('href') === '#') {
-      e.preventDefault();
-      linkedinLink.querySelector('.contact-value').textContent = 'update href with your LinkedIn URL';
-    }
-  });
-}
