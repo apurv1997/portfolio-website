@@ -3,326 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apurv Vyas — Cloud, Platform &amp; Backend Engineer</title>
-<meta name="description" content="Apurv Vyas — Product Engineer specializing in cloud infrastructure, platform engineering, and backend systems.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Apurv Vyas</title>
+<meta name="description" content="Apurv Vyas. Cloud and platform engineer in Mumbai, currently at Dhan.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="grid-overlay" aria-hidden="true"></div>
-
-<header class="topbar">
-  <a href="#top" class="brand">
-    <span class="brand-dot" aria-hidden="true"></span>
-    apurv<span class="brand-dim">.vyas</span>
-  </a>
-  <nav class="topnav" aria-label="Primary">
-    <a href="#log">Experience</a>
-    <a href="#services">Projects</a>
-    <a href="#stack">Stack</a>
+<header>
+  <p class="name">Apurv Vyas</p>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
 </header>
 
-<nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
-  <a href="#log">Experience</a>
-  <a href="#services">Projects</a>
-  <a href="#stack">Stack</a>
-  <a href="#contact">Contact</a>
-</nav>
+<main>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">// product engineer · mumbai, in</p>
-      <h1>Apurv Vyas</h1>
-      <p class="hero-role">I keep trading infrastructure up, secure, and cheap to run —
-        then write the backend that sits on top of it.</p>
-      <p class="hero-sub">Cloud &amp; Platform Engineering at <strong>Dhan</strong>, with three years
-        of production backend work before that. This page is a status page for a career.</p>
-      <div class="hero-actions">
-        <a href="#log" class="btn btn-primary">View the deployment log</a>
-        <a href="mailto:apurv.vys@gmail.com" class="btn btn-ghost">Get in touch</a>
-      </div>
-    </div>
-
-    <div class="status-panel" role="group" aria-label="Live system status">
-      <div class="status-panel-head">
-        <span class="dot dot-live" aria-hidden="true"></span>
-        <span class="status-title">career.status</span>
-        <span class="status-region">ap-south-1</span>
-      </div>
-
-      <ul class="status-list">
-        <li class="status-row">
-          <span class="row-label">
-            <span class="dot dot-ok" aria-hidden="true"></span>
-            cloud-platform-eng
-          </span>
-          <span class="row-meta">since 01/2025 · operational</span>
-        </li>
-        <li class="status-row">
-          <span class="row-label">
-            <span class="dot dot-ok" aria-hidden="true"></span>
-            backend-systems
-          </span>
-          <span class="row-meta">2021–2024 · shipped</span>
-        </li>
-        <li class="status-row">
-          <span class="row-label">
-            <span class="dot dot-ok" aria-hidden="true"></span>
-            security-governance
-          </span>
-          <span class="row-meta">IAM · SCPs · least-priv</span>
-        </li>
-        <li class="status-row">
-          <span class="row-label">
-            <span class="dot dot-warn" aria-hidden="true"></span>
-            kubernetes / terraform
-          </span>
-          <span class="row-meta">in progress</span>
-        </li>
-      </ul>
-
-      <div class="status-panel-foot">
-        <div class="uptime-block">
-          <span class="uptime-label">uptime since first commit (jun 2021)</span>
-          <span class="uptime-value" id="uptimeCounter">calculating…</span>
-        </div>
-        <div class="uptime-block">
-          <span class="uptime-label">monthly cost saved, current role</span>
-          <span class="uptime-value accent-amber">$2,500+</span>
-        </div>
-      </div>
-    </div>
+  <section class="intro">
+    <h1>Apurv Vyas</h1>
+    <p class="lede">I work on cloud infrastructure at Dhan, a stockbroking platform in Mumbai.
+      Most of the job is making sure the AWS account behind a trading system stays boring.</p>
+    <p>Before this I wrote backend services for about three years, mostly Node and MongoDB,
+      which is still where I'm most comfortable. These days I spend more time in IAM policies
+      and pipeline configs than in application code, and I've made my peace with that.</p>
   </section>
 
-  <!-- EXPERIENCE / DEPLOYMENT LOG -->
-  <section class="section" id="log">
-    <h2 class="section-heading"><span class="tag">$</span> git log --oneline --graph experience</h2>
+  <!-- A line or two here about why you got into infra, or what you're reading /
+       building right now, would do more for this page than anything else on it. -->
 
-    <div class="log">
+  <section id="work">
+    <h2>Work</h2>
 
-      <article class="log-entry">
-        <div class="log-time">
-          <span class="log-date">2025‑01</span>
-          <span class="log-date-sub">→ present</span>
-        </div>
-        <div class="log-line" aria-hidden="true"></div>
-        <div class="log-body">
-          <div class="log-card-head">
-            <h3>Product Engineer — Cloud Infrastructure, DevOps &amp; Platform Engineering</h3>
-            <span class="badge badge-live">in prod</span>
-          </div>
-          <p class="log-company">Dhan (Raise Financial Services) · Mumbai, Maharashtra</p>
-          <ul class="log-bullets">
-            <li>Architected and managed end-to-end AWS infrastructure across multiple products, implementing networking, CI/CD automation, and security controls to ensure high availability, scalability, and low-latency performance.</li>
-            <li>Designed and governed a multi-account AWS setup with Organizations, cross-account IAM roles and SCPs to enforce isolation and security guardrails.</li>
-            <li>Rolled out least-privilege access models, audited role usage, and stood up centralized logging and billing visibility.</li>
-            <li>Cut AWS spend by <strong>$2,500+/month</strong> through compute right-sizing, storage optimization and continuous cost monitoring.</li>
-            <li>Automated CI/CD with Jenkins and AWS CodePipeline (CodeBuild, CodeDeploy) with SCA/SAST/DAST checks — deployment effort down <strong>~60%</strong>.</li>
-            <li>Set up CloudWatch, Prometheus and Grafana for monitoring; handled a CentOS 7 → 9 migration with minimal downtime.</li>
-            <li>Hardened platform stability via patch management, backups and DR planning, and shared knowledge across the team.</li>
-          </ul>
-          <div class="log-tags">
-            <span>AWS Organizations</span><span>IAM / SCPs</span><span>Jenkins</span><span>CodePipeline</span>
-            <span>Prometheus</span><span>Grafana</span><span>CloudWatch</span><span>Docker</span>
-          </div>
-        </div>
-      </article>
+    <article class="job">
+      <p class="when">Jan 2025<br><span>to now</span></p>
+      <div class="what">
+        <h3>Cloud and platform engineering at Dhan</h3>
+        <p class="where">Raise Financial Services, Mumbai</p>
 
-      <article class="log-entry">
-        <div class="log-time">
-          <span class="log-date">2022‑02</span>
-          <span class="log-date-sub">→ 2024‑12</span>
-        </div>
-        <div class="log-line" aria-hidden="true"></div>
-        <div class="log-body">
-          <div class="log-card-head">
-            <h3>Product Developer — Backend</h3>
-            <span class="badge badge-done">shipped</span>
-          </div>
-          <p class="log-company">Upsurge (Raise Financial Services) · Mumbai, Maharashtra</p>
-          <ul class="log-bullets">
-            <li>Built and maintained backend systems and REST APIs on Node.js, Express, MongoDB and AWS under high user traffic.</li>
-            <li>Developed onboarding and authentication flows — OTP login, encryption, token-based sessions.</li>
-            <li>Integrated payments, subscriptions and recommendation features to lift engagement.</li>
-            <li>Cut latency by <strong>~40%</strong> with Redis caching, query optimization and async processing.</li>
-            <li>Refactored a monolith into modular, scalable services, improving performance and maintainability.</li>
-          </ul>
-          <div class="log-tags">
-            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>Payments</span>
-          </div>
-        </div>
-      </article>
+        <p>I own the AWS side of things across a few products: networking, deploys,
+          access control, and the bill.</p>
 
-      <article class="log-entry">
-        <div class="log-time">
-          <span class="log-date">2021‑06</span>
-          <span class="log-date-sub">→ 2022‑02</span>
-        </div>
-        <div class="log-line" aria-hidden="true"></div>
-        <div class="log-body">
-          <div class="log-card-head">
-            <h3>Software Engineer — Backend</h3>
-            <span class="badge badge-done">shipped</span>
-          </div>
-          <p class="log-company">Mobzway Technologies Pvt. Ltd. · Jaipur, Rajasthan</p>
-          <ul class="log-bullets">
-            <li>Built high-performance Node.js APIs for real-time multiplayer gaming systems on MongoDB and SmartFoxServer.</li>
-            <li>Implemented secure HMAC/SHA-256 authentication and backend performance optimizations.</li>
-          </ul>
-          <div class="log-tags">
-            <span>Node.js</span><span>MongoDB</span><span>SmartFoxServer</span><span>HMAC/SHA-256</span>
-          </div>
-        </div>
-      </article>
+        <p>The account structure was the first real piece of work. We run several AWS accounts
+          under Organizations, so I built the cross-account IAM roles and the service control
+          policies that keep them apart, then went through everyone's permissions and cut them
+          down to what they were actually using. Centralized logging and billing visibility came
+          out of the same effort.</p>
 
-    </div>
+        <p>The bill was the second. Right-sizing compute and cleaning up old storage took about
+          $2,500 a month off it. I keep an eye on it now so it doesn't creep back up.</p>
+
+        <p>Deploys used to be a manual affair. They go through Jenkins and CodePipeline now,
+          with SCA, SAST and DAST checks in the pipeline. My rough estimate is 60% less effort
+          per release, though that number is a feel more than a measurement.</p>
+
+        <p>Beyond that: CloudWatch, Prometheus and Grafana for monitoring, a CentOS 7 to 9
+          migration that went out with almost no downtime, and the patching, backups and DR
+          planning that nobody notices until the day they need it.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <p class="when">Feb 2022<br><span>to Dec 2024</span></p>
+      <div class="what">
+        <h3>Backend at Upsurge</h3>
+        <p class="where">Raise Financial Services, Mumbai</p>
+
+        <p>Node, Express and MongoDB on AWS, with enough traffic that the slow paths found us
+          quickly. I built the onboarding and auth flow (OTP login, token sessions, encryption)
+          and then spent a long stretch on payments and subscriptions.</p>
+
+        <p>Most of the performance work was Redis caching and rewriting queries that had no
+          business being as slow as they were. Response times came down roughly 40%. Toward the
+          end I split the monolith into separate services, which took considerably longer than
+          I had told anyone it would.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <p class="when">Jun 2021<br><span>to Feb 2022</span></p>
+      <div class="what">
+        <h3>Backend at Mobzway Technologies</h3>
+        <p class="where">Jaipur</p>
+
+        <p>My first job. Node APIs for real-time multiplayer games, running on MongoDB and
+          SmartFoxServer. I wrote the HMAC and SHA-256 auth for it, and learned what happens
+          to a server when a few thousand people connect to it at the same time.</p>
+      </div>
+    </article>
   </section>
 
-  <!-- PROJECTS / SERVICES -->
-  <section class="section" id="services">
-    <h2 class="section-heading"><span class="tag">#</span> portfolio services</h2>
-    <p class="section-sub">Independent projects built to demonstrate the cloud/platform track end-to-end — each mirrors a real problem from the day job.</p>
+  <section id="projects">
+    <h2>Side projects</h2>
 
-    <div class="service-grid">
+    <h3>AWS landing zone</h3>
+    <p>An account vending machine, written with the CDK in TypeScript. It automates the onboarding
+      I currently do by hand at work: SSO, KMS, service control policies, logging, cross-account
+      roles. Mostly an excuse to stop doing it by hand. Still building.</p>
 
-      <article class="service-card">
-        <div class="service-head">
-          <h3>AWS Landing Zone <span class="service-sub">/ Account Vending Machine</span></h3>
-          <span class="badge badge-progress">design → build</span>
-        </div>
-        <p>Automates new-account onboarding — SSO, KMS, SCPs, centralized logging and cross-account IAM — built with the AWS CDK in TypeScript. Directly mirrors the manual account-onboarding process at Dhan, turned into repeatable infrastructure-as-code.</p>
-        <div class="log-tags">
-          <span>AWS CDK</span><span>TypeScript</span><span>SSO</span><span>KMS</span><span>SCPs</span>
-        </div>
-      </article>
+    <h3>Multi-tenant Moodle</h3>
+    <p>A single LMS serving separate cohorts, with Google OAuth for login and tenant separation
+      by cohort. Moodle in Docker, MariaDB behind it, S3 for files and backups, the whole thing
+      provisioned through CloudFormation. Finished and running.</p>
 
-      <article class="service-card">
-        <div class="service-head">
-          <h3>Multi-Tenant Moodle LMS</h3>
-          <span class="badge badge-scoped">fully scoped</span>
-        </div>
-        <p>Designed and implemented a centralized LMS with Google OAuth, cohort-based tenant separation, Dockerized Moodle, MariaDB, and Amazon S3 for storage and backups. Architected the AWS infrastructure and automated provisioning using CloudFormation.</p>
-        <div class="log-tags">
-          <span>CloudFormation</span><span>Docker</span><span>MariaDB</span><span>S3</span><span>Google OAuth</span>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-head">
-          <h3>HashiCorp Nomad POC</h3>
-          <span class="badge badge-poc">poc</span>
-        </div>
-        <p>Proof of concept for Stratzy exploring Nomad as a lighter alternative to Kubernetes for HFT workloads — VM/binary orchestration across 3 EC2 instances with the exec driver, provisioned via CloudFormation. Built for an internal stakeholder review ahead of any implementation decision.</p>
-        <div class="log-tags">
-          <span>Nomad</span><span>EC2</span><span>CloudFormation</span><span>HFT workloads</span>
-        </div>
-      </article>
-
-    </div>
+    <h3>Nomad proof of concept</h3>
+    <p>A look at whether HashiCorp Nomad could stand in for Kubernetes on HFT workloads at Stratzy.
+      Three EC2 instances, the exec driver, CloudFormation underneath. It was built for an internal
+      review, so there's no verdict on it yet.</p>
   </section>
 
-  <!-- STACK / SKILLS -->
-  <section class="section" id="stack">
-    <h2 class="section-heading"><span class="tag">~</span> cat /etc/stack.conf</h2>
-
-    <div class="stack-grid">
-      <div class="stack-card">
-        <h3>Languages &amp; Backend</h3>
-        <p>JavaScript (Node.js), REST APIs</p>
-      </div>
-      <div class="stack-card">
-        <h3>Databases &amp; Caching</h3>
-        <p>MongoDB, MySQL, Redis</p>
-      </div>
-      <div class="stack-card">
-        <h3>Cloud &amp; Infrastructure</h3>
-        <p>AWS — EC2, IAM, VPC, S3, CloudWatch, Organizations, SCPs</p>
-      </div>
-      <div class="stack-card">
-        <h3>CI/CD &amp; Containers</h3>
-        <p>Jenkins, AWS CodePipeline (CodeBuild, CodeDeploy), Docker, GitLab</p>
-      </div>
-      <div class="stack-card">
-        <h3>Monitoring &amp; Observability</h3>
-        <p>Grafana, Prometheus, CloudWatch</p>
-      </div>
-      <div class="stack-card">
-        <h3>Networking &amp; Security</h3>
-        <p>VPC, Subnets, Security Groups, Load Balancing, IAM, Least Privilege, SCPs, TLS</p>
-      </div>
-      <div class="stack-card">
-        <h3>Architecture</h3>
-        <p>System Design, Microservices, Distributed Systems, OOP</p>
-      </div>
-      <div class="stack-card">
-        <h3>Operating Systems</h3>
-        <p>Linux — CentOS, Ubuntu</p>
-      </div>
-    </div>
+  <section id="tools">
+    <h2>Tools</h2>
+    <p>Day to day: AWS (EC2, VPC, IAM, S3, CloudWatch, Organizations, SCPs), Docker, Jenkins,
+      CodePipeline, Prometheus, Grafana, and Linux on CentOS and Ubuntu.</p>
+    <p>When I'm writing code it's JavaScript on Node, REST APIs, and some mix of MongoDB,
+      MySQL and Redis.</p>
+    <p>Kubernetes and Terraform I'm still learning properly. I can get things working in both.
+      I wouldn't call myself good at either yet.</p>
   </section>
 
-  <!-- EDUCATION -->
-  <section class="section section-narrow" id="education">
-    <h2 class="section-heading"><span class="tag">&gt;</span> education</h2>
-    <div class="edu-card">
-      <div>
-        <h3>Bachelor of Technology, Computer Science</h3>
-        <p class="log-company">Arya Institute of Engineering &amp; Technology, Jaipur (RTU Kota) · Jaipur, Rajasthan</p>
-      </div>
-      <span class="edu-year">2016 – 2020</span>
-    </div>
+  <section id="contact">
+    <h2>Get in touch</h2>
+    <p>Email is the surest way to reach me. Happy to talk about AWS account structure, cloud cost,
+      or running backend systems for financial products.</p>
+    <ul class="links">
+      <li><a href="mailto:apurv.vys@gmail.com">apurv.vys@gmail.com</a></li>
+      <li><a href="tel:+919414353674">+91 94143 53674</a></li>
+      <li><a href="https://github.com/apurv1997" rel="me noopener" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/apurv-vyas-081552183/" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="https://x.com/apurv_vyas" rel="me noopener" target="_blank">X</a></li>
+    </ul>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contact">
-    <h2 class="section-heading"><span class="tag">$</span> curl -X CONNECT apurv</h2>
-    <p class="section-sub">Open to conversations on cloud platform engineering, backend systems, or capital-markets infrastructure.</p>
-
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:apurv.vys@gmail.com">
-        <span class="contact-label">email</span>
-        <span class="contact-value">apurv.vys@gmail.com</span>
-      </a>
-      <a class="contact-card" href="tel:+919414353674">
-        <span class="contact-label">phone</span>
-        <span class="contact-value">+91 94143 53674</span>
-      </a>
-      <a class="contact-card" href="https://www.linkedin.com/in/apurv-vyas-081552183/" target="_blank" rel="noopener noreferrer">
-        <span class="contact-label">linkedin</span>
-        <span class="contact-value">/in/apurv-vyas →</span>
-      </a>
-      <a class="contact-card" href="https://x.com/apurv_vyas" target="_blank" rel="noopener noreferrer">
-        <span class="contact-label">x (twitter)</span>
-        <span class="contact-value">@apurv_vyas →</span>
-      </a>
-      <a class="contact-card" href="https://github.com/apurv1997" target="_blank" rel="noopener noreferrer">
-        <span class="contact-label">github</span>
-        <span class="contact-value">/apurv1997 →</span>
-      </a>
-      <div class="contact-card">
-        <span class="contact-label">location</span>
-        <span class="contact-value">Mumbai, Maharashtra, IN</span>
-      </div>
-    </div>
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Tech in Computer Science, Arya Institute of Engineering and Technology, Jaipur
+      (RTU Kota), 2016 to 2020.</p>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <p>Built by Apurv Vyas · <span id="year"></span></p>
+<footer>
+  <p>Mumbai. Last updated August 2026.</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
