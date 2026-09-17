@@ -43,30 +43,38 @@ function EmailIcon() {
 export default function Home() {
   return (
     <section id="home" className="hero">
-      <h1>Apurv Vyas</h1>
-      <p className="designation"><b>Product Engineer | DHAN (Raise Financial Services)</b></p>
-      <p className="location">
-        <LocationIcon />
-        <span><b>Mumbai, Maharashtra</b></span>
-      </p>
-      <div className="social-links">
-        <a className="social-link social-github" href="https://github.com/apurv1997" target="_blank" rel="me noopener">
-          <GithubIcon />
-          <span>GitHub</span>
-        </a>
-        <a className="social-link social-linkedin" href="https://www.linkedin.com/in/apurv-vyas-081552183/" target="_blank" rel="me noopener">
-          <LinkedinIcon />
-          <span>LinkedIn</span>
-        </a>
-        <a className="social-link social-email" href="mailto:apurv.vys@gmail.com">
-          <EmailIcon />
-          <span>Email</span>
-        </a>
+      <div className="hero-inner">
+        <div className="hero-text">
+          <h1>Apurv Vyas</h1>
+          <p className="designation"><b>Product Engineer | DHAN (Raise Financial Services)</b></p>
+          <p className="location">
+            <LocationIcon />
+            <span><b>Mumbai, Maharashtra</b></span>
+          </p>
+          <p className="tagline"><b>Software Engineer specializing in Platform Engineering</b></p>
+          <p className="tagline-sub">
+            <b>Covers cloud architecture, DevOps, and security — one person doing what's three roles at a bigger company.</b>
+          </p>
+          <div className="social-links">
+            <a className="social-link social-github" href="https://github.com/apurv1997" target="_blank" rel="me noopener" aria-label="GitHub">
+              <GithubIcon />
+            </a>
+            <a className="social-link social-linkedin" href="https://www.linkedin.com/in/apurv-vyas-081552183/" target="_blank" rel="me noopener" aria-label="LinkedIn">
+              <LinkedinIcon />
+            </a>
+            <a className="social-link social-email" href="mailto:apurv.vys@gmail.com" aria-label="Email">
+              <EmailIcon />
+            </a>
+          </div>
+          <a className="resume-button" href="/resume.pdf" download="Apurv-Vyas-Resume.pdf">
+            <DownloadIcon />
+            <span><b>Download Resume</b></span>
+          </a>
+        </div>
+        <div className="hero-photo">
+          <img src="/photo.jpg" alt="Apurv Vyas" />
+        </div>
       </div>
-      <a className="resume-button" href="/resume.pdf" download="Apurv-Vyas-Resume.pdf">
-        <DownloadIcon />
-        <span>Download Resume</span>
-      </a>
     </section>
   )
 }
