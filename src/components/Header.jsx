@@ -42,6 +42,7 @@ function MoonIcon() {
 
 export default function Header() {
   const [theme, setTheme] = useState(readStoredTheme)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     if (theme) {
@@ -52,6 +53,15 @@ export default function Header() {
     }
   }, [theme])
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   function toggleTheme() {
     const current = theme ?? (prefersDark() ? 'dark' : 'light')
     setTheme(current === 'dark' ? 'light' : 'dark')
@@ -60,7 +70,7 @@ export default function Header() {
   const isDark = theme ?? (typeof window !== 'undefined' && prefersDark() ? 'dark' : 'light')
 
   return (
-    <header>
+    <header className={scrolled ? 'is-scrolled' : undefined}>
       <p className="name">Apurv Vyas</p>
       <nav>
         {links.map(({ to, label }) => (
