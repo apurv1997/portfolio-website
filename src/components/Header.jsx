@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <header>
-      <p className="brand">Apurv Vyas</p>
+      <p className="name">Apurv Vyas</p>
       <nav>
         {links.map(({ to, label }) => (
           <a key={to} href={to}>{label}</a>
