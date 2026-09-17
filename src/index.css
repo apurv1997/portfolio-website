@@ -53,9 +53,10 @@ header .name{
   font-size: 0.95rem;
   color: var(--ink-soft);
 }
-header nav{ display: flex; gap: 1.4rem; font-size: 0.95rem; }
+header nav{ display: flex; gap: 1.4rem; font-size: 0.95rem; flex-wrap: wrap; }
 header nav a{ color: var(--ink-soft); text-decoration: none; }
 header nav a:hover{ color: var(--accent); }
+header nav a.active{ color: var(--accent); }
 
 /* ---- intro ---- */
 .intro{ padding: 4.5rem 0 1rem; }
@@ -77,8 +78,7 @@ h1{
 p{ margin: 0 0 1.15rem; }
 
 /* ---- sections ---- */
-section{ padding: 3rem 0 0; }
-#work{ padding-top: 4rem; }
+section{ padding: 4rem 0 1rem; }
 
 h2{
   font-size: 0.95rem;
