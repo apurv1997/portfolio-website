@@ -13,91 +13,90 @@ export default function Projects() {
 
       <article className="project">
         <h3>Multi-account access control and cost cleanup</h3>
-        <p className="stack"><b>AWS Organizations · IAM · SCPs · CloudTrail · Cost Explorer</b></p>
-        <p>
-          We run several AWS accounts under one Organization, and permissions had grown
-          the way permissions always do: broadly, and without much record of why.
-        </p>
-        <p>
-          I designed cross-account IAM roles and service control policies to keep the
-          accounts properly separated, then went through every role and user and cut
-          access down to what was actually being used. Centralized logging and billing
-          visibility came out of the same pass — once you're auditing permissions
-          account by account, you may as well wire up somewhere to see all the spend
-          at once. Right-sizing compute and clearing out orphaned storage on the back
-          of that visibility took about $2,500 a month off the bill.
-        </p>
+        <ul className="stack">
+          <li>AWS Organizations</li>
+          <li>IAM</li>
+          <li>SCPs</li>
+          <li>CloudTrail</li>
+          <li>Cost Explorer</li>
+        </ul>
+        <ul className="project-points">
+          <li>Several AWS accounts under one Organization had permissions that grew broadly, with little record of why.</li>
+          <li>Designed cross-account IAM roles and service control policies to keep accounts properly separated.</li>
+          <li>Audited every role and user, enforcing least-privilege access across environments.</li>
+          <li>Centralized logging and billing visibility as part of the same effort, including continuous cost monitoring rather than a one-off pass.</li>
+          <li>Right-sized compute and cleared out orphaned storage, <mark>cutting $2,500+ a month off the bill.</mark></li>
+        </ul>
       </article>
 
       <article className="project">
         <h3>CI/CD pipeline with security gates built in</h3>
-        <p className="stack"><b>Jenkins · AWS CodePipeline · SCA · SAST · DAST · Docker</b></p>
-        <p>
-          Deploys were manual before this: someone SSH'd in, pulled the branch, and
-          hoped. It worked until it didn't, and nobody could tell you what was actually
-          running in production at a given time.
-        </p>
-        <p>
-          I rebuilt the release process around Jenkins and CodePipeline, with SCA, SAST
-          and DAST checks running as gates rather than an afterthought — a build with a
-          high-severity finding doesn't ship. The pipeline also standardized what "done"
-          means for a release: build, scan, deploy, verify, in that order, every time.
-          My rough estimate is 60% less manual effort per release, though that number is
-          a feel more than a measurement.
-        </p>
+        <ul className="stack">
+          <li>Jenkins</li>
+          <li>AWS CodePipeline</li>
+          <li>SCA</li>
+          <li>SAST</li>
+          <li>DAST</li>
+          <li>Docker</li>
+        </ul>
+        <ul className="project-points">
+          <li>Deploys were manual before this: someone SSH'd in, pulled the branch, and hoped — nobody could tell you what was actually running in production.</li>
+          <li>Rebuilt the release process around Jenkins and AWS CodePipeline.</li>
+          <li>Added security checks (SCA, SAST and DAST) as required steps, not extras - if a build has a serious issue, it doesn't get deployed.</li>
+          <li>Set a clear, repeatable process for every release: build, scan, deploy, then verify — always in that order.</li>
+          <li><mark>Cut manual effort per release by roughly 60%</mark> — that's an estimate, not an exact measurement.</li>
+        </ul>
       </article>
 
       <article className="project">
         <h3>CentOS 7 to 9 migration</h3>
-        <p className="stack"><b>CentOS · EC2 · Load balancing · Bash</b></p>
-        <p>
-          CentOS 7 was heading out of support, and the fleet behind it wasn't small
-          enough to ignore that.
-        </p>
-        <p>
-          The approach was staged rather than in-place: build and test CentOS 9 images
-          alongside the existing fleet, roll new instances in behind the load balancer,
-          confirm health, then retire the old ones a batch at a time. Nothing got
-          upgraded in place, which cost more setup time but meant there was always a
-          known-good fallback one step away. It went out with almost no downtime.
-        </p>
+        <ul className="stack">
+          <li>CentOS</li>
+          <li>EC2</li>
+          <li>Load balancing</li>
+          <li>Bash</li>
+        </ul>
+        <ul className="project-points">
+          <li>CentOS 7 was heading out of support, and the fleet behind it wasn't small enough to ignore.</li>
+          <li>Took a staged approach instead of in-place upgrades: built and tested CentOS 9 images alongside the existing fleet.</li>
+          <li>Rolled new instances in behind the load balancer, confirmed health, then retired old ones a batch at a time.</li>
+          <li>Kept a known-good fallback one step away at every stage — <mark>went out with almost no downtime</mark>.</li>
+        </ul>
       </article>
 
       <article className="project">
         <h3>Monolith to microservices split at Upsurge</h3>
-        <p className="stack"><b>Node.js · Express · MongoDB · Redis · REST</b></p>
-        <p>
-          One Node and Express monolith had grown to cover onboarding, auth, payments
-          and subscriptions, and traffic had grown enough that the slow paths in it
-          were starting to find everyone.
-        </p>
-        <p>
-          I split it along those domain lines — payments and subscriptions came out
-          first, since they were the parts most likely to need independent scaling and
-          release cycles. Redis caching and a pass on the worst-offending queries
-          brought response times down roughly 40% before the split even finished. The
-          split itself took considerably longer than I told anyone it would, which is
-          probably the most honest thing I can say about it.
-        </p>
+        <ul className="stack">
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+          <li>Redis</li>
+          <li>REST</li>
+        </ul>
+        <ul className="project-points">
+          <li>One Node and Express monolith had grown to cover onboarding and authentication (OTP login, encrypted credentials, token-based sessions), payments and subscription billing, and recommendation features — and traffic had grown enough that the slow paths were starting to find everyone.</li>
+          <li>Split the monolith along domain lines, starting with payments and subscriptions — the parts most likely to need independent scaling and release cycles.</li>
+          <li>Added Redis caching, moved slow synchronous work to async processing, and rewrote the worst-offending queries — together <mark>bringing response times down roughly 40%</mark> before the split even finished.</li>
+          <li>The split itself took considerably longer than expected, which is probably the most honest thing to say about it.</li>
+        </ul>
       </article>
 
-      <article className="project">
+     {/* <article className="project">
         <h3>Real-time multiplayer backend at Mobzway</h3>
-        <p className="stack"><b>Node.js · MongoDB · SmartFoxServer · HMAC/SHA-256</b></p>
-        <p>
-          Real-time multiplayer games need a backend that can hold session and
-          matchmaking state for a few thousand concurrent players without falling over,
-          and that trusts none of the traffic hitting it by default.
-        </p>
-        <p>
-          Node APIs sat in front of SmartFoxServer for the real-time messaging layer,
-          with MongoDB holding player and session state. I wrote the request signing
-          scheme — HMAC with SHA-256 — to stop requests from being tampered with or
-          replayed, which mattered more than usual given how easy it is to cheat a game
-          server that trusts its own clients. This was also where I learned, firsthand,
-          what a server looks like under real concurrent load.
-        </p>
-      </article>
+        <ul className="stack">
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>SmartFoxServer</li>
+          <li>HMAC/SHA-256</li>
+        </ul>
+        <ul className="project-points">
+          <li>Needed a backend that could hold session and matchmaking state for a few thousand concurrent players without falling over, trusting none of the traffic by default.</li>
+          <li>Built Node APIs in front of SmartFoxServer for the real-time messaging layer, with MongoDB holding player and session state.</li>
+          <li>Wrote the request signing scheme — HMAC with SHA-256 — to stop requests from being tampered with or replayed.</li>
+          <li>Learned, firsthand, what a server looks like under real concurrent load.</li>
+        </ul>
+      </article>*/}
+
     </section>
   )
 }
