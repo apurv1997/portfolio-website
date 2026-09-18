@@ -49,17 +49,6 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-body::before{
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: radial-gradient(var(--accent) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
-  opacity: 0.3;
-  pointer-events: none;
-}
-
 a{
   color: var(--accent);
   text-decoration-thickness: 1px;
