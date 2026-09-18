@@ -1,11 +1,19 @@
+function ProjectsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" />
+    </svg>
+  )
+}
+
 export default function Projects() {
   return (
     <section id="projects">
-      <h2>My Projects</h2>
+      <h2><ProjectsIcon /><b>Projects_</b></h2>
 
       <article className="project">
         <h3>Multi-account access control and cost cleanup</h3>
-        <p className="stack">AWS Organizations · IAM · SCPs · CloudTrail · Cost Explorer</p>
+        <p className="stack"><b>AWS Organizations · IAM · SCPs · CloudTrail · Cost Explorer</b></p>
         <p>
           We run several AWS accounts under one Organization, and permissions had grown
           the way permissions always do: broadly, and without much record of why.
@@ -23,7 +31,7 @@ export default function Projects() {
 
       <article className="project">
         <h3>CI/CD pipeline with security gates built in</h3>
-        <p className="stack">Jenkins · AWS CodePipeline · SCA · SAST · DAST · Docker</p>
+        <p className="stack"><b>Jenkins · AWS CodePipeline · SCA · SAST · DAST · Docker</b></p>
         <p>
           Deploys were manual before this: someone SSH'd in, pulled the branch, and
           hoped. It worked until it didn't, and nobody could tell you what was actually
@@ -41,7 +49,7 @@ export default function Projects() {
 
       <article className="project">
         <h3>CentOS 7 to 9 migration</h3>
-        <p className="stack">CentOS · EC2 · Load balancing · Bash</p>
+        <p className="stack"><b>CentOS · EC2 · Load balancing · Bash</b></p>
         <p>
           CentOS 7 was heading out of support, and the fleet behind it wasn't small
           enough to ignore that.
@@ -57,7 +65,7 @@ export default function Projects() {
 
       <article className="project">
         <h3>Monolith to microservices split at Upsurge</h3>
-        <p className="stack">Node.js · Express · MongoDB · Redis · REST</p>
+        <p className="stack"><b>Node.js · Express · MongoDB · Redis · REST</b></p>
         <p>
           One Node and Express monolith had grown to cover onboarding, auth, payments
           and subscriptions, and traffic had grown enough that the slow paths in it
@@ -75,7 +83,7 @@ export default function Projects() {
 
       <article className="project">
         <h3>Real-time multiplayer backend at Mobzway</h3>
-        <p className="stack">Node.js · MongoDB · SmartFoxServer · HMAC/SHA-256</p>
+        <p className="stack"><b>Node.js · MongoDB · SmartFoxServer · HMAC/SHA-256</b></p>
         <p>
           Real-time multiplayer games need a backend that can hold session and
           matchmaking state for a few thousand concurrent players without falling over,

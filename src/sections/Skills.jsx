@@ -1,9 +1,17 @@
+function SkillsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z" />
+    </svg>
+  )
+}
+
 export default function Skills() {
   return (
     <section id="skills">
-      <h2>Skills & Technologies</h2>
+      <h2><SkillsIcon /><b>Skills &amp; Technologies_</b></h2>
 
-      <h3>Backend</h3>
+      <h3>Languages &amp; Backend :</h3>
       <ul className="skill-boxes">
         <li>JavaScript</li>
         <li>Python</li>
@@ -11,13 +19,13 @@ export default function Skills() {
         <li>REST APIs</li>
       </ul>
 
-      <h3>Cloud &amp; Infrastructure</h3>
+      <h3>Cloud &amp; Infrastructure :</h3>
       <ul className="skill-boxes">
         <li>AWS (EC2, IAM, VPC, S3, OIDC, SCPs)</li>
         <li>Multi-Account Governance</li>
       </ul>
 
-      <h3>IaC &amp; CI/CD</h3>
+      <h3>IaC &amp; CI/CD :</h3>
       <ul className="skill-boxes">
         <li>Terraform</li>
         <li>CloudFormation</li>
@@ -29,7 +37,7 @@ export default function Skills() {
         <li>Checkov</li>
       </ul>
 
-      <h3>Monitoring &amp; Observability</h3>
+      <h3>Monitoring &amp; Observability :</h3>
       <ul className="skill-boxes">
         <li>Grafana</li>
         <li>Prometheus</li>
@@ -37,14 +45,14 @@ export default function Skills() {
         <li>SigNoz</li>
       </ul>
 
-      <h3>Databases &amp; Caching</h3>
+      <h3>Databases &amp; Caching :</h3>
       <ul className="skill-boxes">
         <li>MongoDB</li>
         <li>MySQL</li>
         <li>Redis</li>
       </ul>
 
-      <h3>Networking &amp; Security</h3>
+      <h3>Networking &amp; Security :</h3>
       <ul className="skill-boxes">
         <li>VPC</li>
         <li>Subnets</li>
